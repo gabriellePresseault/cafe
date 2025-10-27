@@ -1,4 +1,6 @@
 .GrainZone {
+    margin: 0 auto;
+    margin-top: 3em;
     background-color: gray;
     width: 50%;
     height: 10em;
