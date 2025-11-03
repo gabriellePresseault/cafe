@@ -1,0 +1,41 @@
+.CremeZone {
+ width: 171px;
+ height: 286px;
+  background-image: url('/img/lait.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.B1{
+     width: 33px;
+ height: 33px;
+  background-color: #585757;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+.B2{
+       width: 33px;
+ height: 33px;
+  background-color: #585757;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+.B3{
+       width: 33px;
+ height: 33px;
+  background-color: #585757;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
