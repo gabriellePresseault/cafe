@@ -9,5 +9,5 @@
 }
 
 .GrainZone:hover {
-    filter: drop-shadow(0em 1em 0.75rem rgba(255, 255, 255, 0.418))
+    filter: drop-shadow(0em 1em 0.75rem rgba(0, 0, 0, 0.418))
 }
