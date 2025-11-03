@@ -39,7 +39,8 @@ const Machine = () => {
     if (id === "b2") console.log("Machine → Bouton 2 activé !");
     if (id === "b3") console.log("Machine → Bouton 3 activé !");
   };
-
+ const isBValide = clicks.b1 && clicks.b2 && clicks.b3;
+ console.log(isBValide)
      
     return (
         <div className="Machine">
