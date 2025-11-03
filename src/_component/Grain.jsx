@@ -2,30 +2,38 @@
 'use client'
 import "./Grain.css"
 import { gsap } from "gsap";
-import { useRef } from "react";
- 
-const Grain = () => {
-    const grainRef=useRef();
- 
-    const handleClick = () => {
+import { useEffect, useRef  } from "react";
+
+const Grain = ({ aumGramme , isOn}) => {
+//   const grainRef = useRef();
+
+  
+//    useEffect(()=>{
+//     if(!grainRef.current) return;
+
+//     gsap.to(grainRef.current,{
+//    scale:isOn ? 1.2:1,
+//     duration: 0.3, 
+//     ease: "power2.out", 
+//     yoyo: true,
+//     repeat: 1
+// }[isOn])
+//    })
    
-    gsap.to(grainRef.current, {
-      scale: 1.2,        
-      duration: 0.5,    
-      ease: "power2.out"
-    });
-     gsap.to(grainRef.current, {
-      scale: 1,        
-      duration: 0.1,    
-      ease: "power2.out"
-    });
-  };
+
+   
  
- 
-    return (
-        <div className="GrainZone" ref={grainRef} onDoubleClick={handleClick}></div>
-    );
-}  
- 
+
+  return (
+    <div 
+      className="GrainZone"
+      // ref={grainRef}
+      onClick={aumGramme}
+      
+    ></div>
+  );
+};
+
 export default Grain;
+
  
