@@ -1,10 +1,12 @@
 import Machine from "@/_component/Machine";
-import Image from "next/image";
+import Tableau from "@/_component/Tableau";
+import "./page.css"
 
 export default function Home() {
   return (
-    <div >
+    <div className="Home">
       <Machine/>
+      <Tableau/>
     </div>
   );
 }
