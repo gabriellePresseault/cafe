@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 import "./Machine.css"
 
-
 const Machine = () => {
    const [isOn,setIsOn]= useState(false);
    useEffect(()=>{
@@ -23,12 +22,13 @@ const Machine = () => {
             </span>
             <span className="cafe" >
                 <Cafe isOn={isOn} handleClick={handleClick}/>
+
             </span>
             <span className="creme">
                 <Creme />
             </span>
         </div>
     );
-}  
+}
 
 export default Machine;
