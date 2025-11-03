@@ -2,39 +2,43 @@
 import Grain from "./Grain";
 import Cafe from "./Cafe";
 import Creme from "./Creme";
-import Temperature from "./Temperature";
+import Roulette from "./Roulette";
 import { useEffect, useState } from "react";
 import ConteurGramme from "./ConteurGramme";
 
 import "./Machine.css"
 
 const Machine = () => {
-   const [isOn,setIsOn]= useState(false);
-   
-   useEffect(()=>{
+    const [isOn, setIsOn] = useState(false);
+    const [rotation, setRotation] = useState(0);
 
-   },[isOn])
-const handleClick=()=>{
-    setIsOn(isOn?false:true)
-}
+    useEffect(() => {
 
-    const [nbgramme, setgramme]= useState(0)
-    const aumGramme=()=>{
-        setgramme(nbgramme+1);
+    }, [isOn])
+    const handleClick = () => {
+        setIsOn(isOn ? false : true)
     }
-    
+    const isValidTemperature = rotation >= 200 && rotation <= 230;
+    const [nbgramme, setgramme] = useState(0)
+    const aumGramme = () => {
+        setgramme(nbgramme + 1);
+    }
 
     return (
         <div className="Machine">
             <span className="grain">
-                <Grain isOn={isOn} aumGramme={aumGramme}/>
-                <ConteurGramme conter={nbgramme}/>
+                <Grain isOn={isOn} aumGramme={aumGramme} />
+                <ConteurGramme conter={nbgramme} />
             </span>
             <span className="temperature" >
-                <Temperature />
+                <Roulette isOn={isOn}
+                    rot={rotation}
+                    setRot={setRotation}
+                    isValidTemperature={isValidTemperature}
+                />
             </span>
             <span className="cafe" >
-                <Cafe isOn={isOn} handleClick={handleClick}/>
+                <Cafe isOn={isOn} handleClick={handleClick} />
 
             </span>
             <span className="creme">

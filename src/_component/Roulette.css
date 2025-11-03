@@ -1,3 +1,12 @@
+.Roulette {
+    position: relative;
+}
+
+
+
 #knob {
-    border: solid red 4px;
+    border: solid rgba(224, 219, 219, 0.027) 4px;
+    position: absolute;
+    top: 6em;
+    right: 2em;
 }

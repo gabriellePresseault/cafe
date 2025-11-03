@@ -7,19 +7,19 @@ const Tableau = () => {
                 <h1>Machine à Café</h1>
                 <ol>
                     <li>
-                        <p>~ Déposez le café ~</p> {/* Ouvrir la machine */}
+                        ~ Déposez le café ~ {/* Ouvrir la machine */}
                     </li>
                     <li>
-                        <p>~ Ajouter du grain en cliquant dessu ~</p>
+                        ~ Cliquez sur grain en cliquant dessu ~
                     </li>
                     <li>
-                        <p>~ Modifier la température ~</p>
+                        ~ Modifiez la température en tournant la roulette ~
                     </li>
                     <li>
-                        <p>~ Fabriquez de la crème ~</p>
+                        ~ Cliquez sur la crème pour la mettre en marche ~
                     </li>
                     <li>
-                        <p>~ Appréciez votre café! ~</p>
+                        ~ Appréciez votre café! ~
                     </li>
                 </ol>
             </div>
