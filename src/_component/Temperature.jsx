@@ -1,9 +1,12 @@
+import Roulette from "./Roulette";
 import "./Temperature.css"
 
 const Temperature = () => {
 
     return (
-        <div className="TemperatureZone"></div>
+        <div className="TemperatureZone">
+            <Roulette/>
+        </div>
     );
 }
 
