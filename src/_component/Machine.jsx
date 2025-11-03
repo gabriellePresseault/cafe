@@ -4,21 +4,31 @@ import Cafe from "./Cafe";
 import Creme from "./Creme";
 import Temperature from "./Temperature";
 import { useEffect, useState } from "react";
+import ConteurGramme from "./ConteurGramme";
 
 import "./Machine.css"
 
 const Machine = () => {
    const [isOn,setIsOn]= useState(false);
+   
    useEffect(()=>{
 
    },[isOn])
 const handleClick=()=>{
     setIsOn(isOn?false:true)
 }
+
+    const [nbgramme, setgramme]= useState(0)
+    const aumGramme=()=>{
+        setgramme(nbgramme+1);
+    }
+    
+
     return (
         <div className="Machine">
             <span className="grain">
-                <Grain />
+                <Grain isOn={isOn} aumGramme={aumGramme}/>
+                <ConteurGramme conter={nbgramme}/>
             </span>
             <span className="temperature" >
                 <Temperature />

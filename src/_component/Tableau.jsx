@@ -25,11 +25,11 @@ const Tableau = () => {
             </div>
             <div className="Illustrations">
                 <div>
-                    <img src="" alt="" />
+                    {/* <img src="" alt="" /> */}
                     <p>Oui!</p>
                 </div>
                 <div>
-                    <img src="" alt="" />
+                    {/* <img src="" alt="" /> */}
                     <p>Non!</p>
                 </div>
             </div>
