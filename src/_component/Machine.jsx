@@ -11,7 +11,7 @@ import "./Machine.css"
 const Machine = () => {
     const [isOn, setIsOn] = useState(false);
     const [rotation, setRotation] = useState(0);
-
+   
     useEffect(() => {
 
     }, [isOn])
@@ -23,7 +23,10 @@ const Machine = () => {
     const aumGramme = () => {
         setgramme(nbgramme + 1);
     }
-
+    
+    const [click, setClick] = useState(false);
+     const auclick = () => setClick(prev => !prev);
+     
     return (
         <div className="Machine">
             <span className="grain">
@@ -42,7 +45,7 @@ const Machine = () => {
 
             </span>
             <span className="creme">
-                <Creme />
+                 <Creme click={click} onBoutonClick={auclick} />
             </span>
         </div>
     );
