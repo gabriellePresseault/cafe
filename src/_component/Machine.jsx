@@ -23,6 +23,24 @@ const Machine = () => {
     
     const [click, setClick] = useState(false);
      const auclick = () => setClick(prev => !prev);
+
+       const [clicks, setClicks] = useState({
+    b1: false,
+    b2: false,
+    b3: false,
+  });
+   const handleBoutonClick = (id) => {
+    setClicks((prev) => ({
+      ...prev,
+      [id]: !prev[id], 
+    }));
+    
+    if (id === "b1") console.log("Machine → Bouton 1 activé !");
+    if (id === "b2") console.log("Machine → Bouton 2 activé !");
+    if (id === "b3") console.log("Machine → Bouton 3 activé !");
+  };
+ const isBValide = clicks.b1 && clicks.b2 && clicks.b3;
+ console.log(isBValide)
      
     return (
         <div className="Machine">
@@ -41,7 +59,7 @@ const Machine = () => {
 
             </span>
             <span className="creme">
-                 <Creme click={click} onBoutonClick={auclick} />
+                 <Creme click={clicks} onBoutonClick={handleBoutonClick}  />
             </span>
         </div>
     );
