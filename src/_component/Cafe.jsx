@@ -4,7 +4,7 @@ import "./Cafe.css";
 import { gsap } from "gsap";
 import { useRef } from "react";
  
-const Cafe = () => {
+const Cafe = ({isOn, handleClick}) => {
   const cafeRef = useRef();
  
   const handleClick = () => {
@@ -20,8 +20,10 @@ const Cafe = () => {
     <div
       className="CafeZone"
       ref={cafeRef}
-      onClick={handleClick}
-    ></div>
+      
+    >
+      <button onClick={handleClick} className={isOn ? 'on':''}></button>
+    </div>
   );
 };
  

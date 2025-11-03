@@ -2,23 +2,31 @@ import Grain from "./Grain";
 import Cafe from "./Cafe";
 import Creme from "./Creme";
 import Temperature from "./Temperature";
+import { useEffect, useState } from "react";
 
+import "./Machine.css"
 
 
 const Machine = () => {
-    // const [nbgrain, setNbGrain]=useState();
+   const [isOn,setIsOn]= useState(false);
+   useEffect(()=>{
 
-    // const augGrains=()=>{
-    //     setNbGrain(nbgrain+1)
-    // }
+   },[isOn])
 
-    // console.log(nbgrain)
     return (
-        <div>
-            <Grain />
-            <Temperature/>
-            <Cafe/>
-            <Creme/>
+        <div className="Machine">
+            <span className="grain">
+                <Grain />
+            </span>
+            <span className="temperature" >
+                <Temperature />
+            </span>
+            <span className="cafe" >
+                <Cafe isOn={isOn} handleClick={handleClick}/>
+            </span>
+            <span className="creme">
+                <Creme />
+            </span>
         </div>
     );
 }  
