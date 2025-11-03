@@ -17,15 +17,13 @@ const Roulette = () => {
     const draggable = Draggable.create(knobRef.current, {
       type: "rotation",
       onDrag: function () {
-        setRotation(this.rotation); 
+        setRotation(this.rotation); // 👈 Save the rotation in state
       },
     })[0];
 
-    return () => draggable.kill(); 
+    return () => draggable.kill(); // cleanup
   }, []);
 
-
-    const rotKnob = Math.round(rotation);
   return (
     <div className="Roulette">
       <svg className="contenue" ref={knobRef} id="knob" width="280" height="280">
@@ -38,6 +36,8 @@ const Roulette = () => {
           strokeWidth="5"
         />
       </svg>
+
+      <p>{Math.round(rotation)}°C</p>
     </div>
   );
 };
