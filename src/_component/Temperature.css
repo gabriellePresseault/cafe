@@ -1,12 +1,11 @@
 .TemperatureZone {
     width: 100%;
-    height: 100%;
-    background-color: #31231E;
+    height: 120%;
     position: relative;
 
     .Roulette {
         position: absolute;
         right: 1px;
-        top: -20px;
+        bottom: -20px;
     }
 }

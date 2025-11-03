@@ -36,7 +36,6 @@ const Roulette = () => {
           strokeWidth="5"
         />
       </svg>
-
       <p>{Math.round(rotation)}°C</p>
     </div>
   );
