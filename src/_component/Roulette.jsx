@@ -4,12 +4,13 @@ import "./Roulette.css";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
+import Temperature from "./Temperature";
 
 gsap.registerPlugin(Draggable);
 
-const Roulette = () => {
+const Roulette = ({rot, setRot, isValidTemperature}) => {
   const knobRef = useRef(null);
-  const [rotation, setRotation] = useState(0);
+  
 
   useEffect(() => {
     if (!knobRef.current) return;
@@ -17,11 +18,11 @@ const Roulette = () => {
     const draggable = Draggable.create(knobRef.current, {
       type: "rotation",
       onDrag: function () {
-        setRotation(this.rotation); // 👈 Save the rotation in state
+        setRot(this.rotation);
       },
     })[0];
 
-    return () => draggable.kill(); // cleanup
+    return () => draggable.kill();
   }, []);
 
   return (
@@ -31,12 +32,12 @@ const Roulette = () => {
           cx="140"
           cy="140"
           r="90"
-          fill="gray"
-          stroke="lightgray"
-          strokeWidth="5"
+          fill="lightgray"
+          stroke="gray"
+          strokeWidth="7"
         />
       </svg>
-      <p>{Math.round(rotation)}°C</p>
+      <Temperature rotation={Math.round(rot)} />
     </div>
   );
 };
