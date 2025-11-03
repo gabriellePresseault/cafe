@@ -1,5 +1,16 @@
-/* .CafeZone {
-    width: 30%;
-    height: 50vh;
-    background-color: #5A3A31;
-} */
+
+.CafeZone {
+ width: 186px;
+ height: 230px;
+  background-image: url('/img/cafevide.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+body{
+    background-color: rgb(187, 179, 113);
+}
+
