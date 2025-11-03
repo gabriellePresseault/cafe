@@ -1,7 +1,10 @@
 .GrainZone {
     margin: 0 auto;
     margin-top: 3em;
-    background-color: gray;
-    width: 50%;
-    height: 10em;
+    background-image: url('/img/grains.png');
+    background-size: cover;
+    background-position: center;
+    width: 289px;
+    height: 65px;
+   
 }

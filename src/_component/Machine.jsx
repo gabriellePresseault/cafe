@@ -2,20 +2,20 @@ import Grain from "./Grain";
 import Cafe from "./Cafe";
 import Creme from "./Creme";
 import Temperature from "./Temperature";
-import { useState } from "react";
+
 
 
 const Machine = () => {
-    const [nbgrain, setNbGrain]=useState();
+    // const [nbgrain, setNbGrain]=useState();
 
-    const augGrains=()=>{
-        setNbGrain(nbgrain+1)
-    }
+    // const augGrains=()=>{
+    //     setNbGrain(nbgrain+1)
+    // }
 
-    console.log(nbgrain)
+    // console.log(nbgrain)
     return (
         <div>
-            <Grain augGrains={augGrains}/>
+            <Grain />
             <Temperature/>
             <Cafe/>
             <Creme/>
