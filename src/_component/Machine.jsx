@@ -1,3 +1,4 @@
+'use client'
 import Grain from "./Grain";
 import Cafe from "./Cafe";
 import Creme from "./Creme";
@@ -11,7 +12,9 @@ const Machine = () => {
    useEffect(()=>{
 
    },[isOn])
-
+const handleClick=()=>{
+    setIsOn(isOn?false:true)
+}
     return (
         <div className="Machine">
             <span className="grain">

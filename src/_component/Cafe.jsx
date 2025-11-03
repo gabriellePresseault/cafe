@@ -1,30 +1,29 @@
 'use client'
- 
+
 import "./Cafe.css";
 import { gsap } from "gsap";
-import { useRef } from "react";
- 
-const Cafe = ({isOn, handleClick}) => {
+import { useRef, useEffect } from "react";
+
+const Cafe = ({ isOn, handleClick }) => {
   const cafeRef = useRef();
- 
-  const handleClick = () => {
-   
+
+  useEffect(() => {
+    if (!cafeRef.current) return;
+
     gsap.to(cafeRef.current, {
-      scale: 1.2,        
-      duration: 0.5,    
+      scale: isOn ? 1.2 : 1,  
+      duration: 0.5,
       ease: "power2.out"
     });
-  };
- 
+  }, [isOn]); 
+
   return (
     <div
-      className="CafeZone"
+      className={`CafeZone ${isOn ? 'on' : ''}`} 
       ref={cafeRef}
-      
-    >
-      <button onClick={handleClick} className={isOn ? 'on':''}></button>
-    </div>
+      onClick={handleClick}
+    ></div>
   );
 };
- 
+
 export default Cafe;
