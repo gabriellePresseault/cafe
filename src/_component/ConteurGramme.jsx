@@ -1,6 +1,12 @@
-const ConteurGramme=({conter})=>{
+import "./ConteurGramme.css";
+
+const ConteurGramme=({conter, isOn})=>{
     return(
-        <div>{conter}g</div>
+        <div className="ConteurGramme">
+            
+            <h1>
+            {!isOn ? conter +"g" : null} 
+            </h1></div>
     )
 }
 export default ConteurGramme;

@@ -1,12 +1,17 @@
 
 .CafeZone {
- width: 186px;
- height: 230px;
+ width: 320px;
+ height: 100%;
   background-image: url('/img/cafevide.png');
-  background-size: cover;
+  background-size: 20em;
+  background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   transition: transform 0.3s ease;
   margin: 0 auto;
+}
+
+.CafeZone:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(255, 255, 255, 0.418))
 }
 

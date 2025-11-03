@@ -9,12 +9,10 @@ import ConteurGramme from "./ConteurGramme";
 import "./Machine.css"
 
 const Machine = () => {
-    const [isOn, setIsOn] = useState(false);
+    const [isOn, setIsOn] = useState(true);
     const [rotation, setRotation] = useState(0);
 
-    useEffect(() => {
 
-    }, [isOn])
     const handleClick = () => {
         setIsOn(isOn ? false : true)
     }
@@ -27,8 +25,7 @@ const Machine = () => {
     return (
         <div className="Machine">
             <span className="grain">
-                <Grain isOn={isOn} aumGramme={aumGramme} />
-                <ConteurGramme conter={nbgramme} />
+                <Grain isOn={isOn} aumGramme={aumGramme} conter={nbgramme} />
             </span>
             <span className="temperature" >
                 <Roulette isOn={isOn}

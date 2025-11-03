@@ -1,14 +1,12 @@
-.TemperatureZone {
+.ConteurGramme {
     position: relative;
-    top: -1.8em;
-    right: 15em;
+    top: 4.8em;
+    right: 20.2em;
     font-size: 2em;
     text-align: right;
-
 
     h1{
         color: rgb(98 197 255);
         font-weight: bold;
-
     }
 }
