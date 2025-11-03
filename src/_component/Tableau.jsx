@@ -25,11 +25,11 @@ const Tableau = () => {
             </div>
             <div className="Illustrations">
                 <div>
-                    {/* <img src="" alt="" /> */}
+                    <img src="/img/cafeBon.png" alt="Oui!" style={{ filter: 'saturate(50%)' }}/>
                     <p>Oui!</p>
                 </div>
                 <div>
-                    {/* <img src="" alt="" /> */}
+                    <img src="/img/cafeMal.png" alt="Non!" style={{ filter: 'saturate(50%)' }}/>
                     <p>Non!</p>
                 </div>
             </div>
