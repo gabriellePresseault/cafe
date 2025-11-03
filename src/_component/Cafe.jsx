@@ -9,9 +9,11 @@ const Cafe = ({ isOn, handleClick }) => {
 
   useEffect(() => {
     if (!cafeRef.current) return;
-
+    
     gsap.to(cafeRef.current, {
-      scale: isOn ? 1.2 : 1,  
+      scale: isOn ? 1 : 0.9,
+      x: isOn ? 0: -80,  
+      y: isOn ? 0 : 80,
       duration: 0.5,
       ease: "power2.out"
     });

@@ -3,7 +3,7 @@
     width: 1000px;
     display: grid;
     grid-template-columns: 1fr 1.5fr 1.5fr;
-    grid-template-rows: 0.2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
     background-image: url(../../public/img/machine.png);
     background-size: cover;
     background-color: #000000;
@@ -22,4 +22,9 @@
 .cafe {
     grid-row: 3/4;
     grid-column: 2/4;
+}
+
+.conteur {
+    grid-row: 2/3;
+    grid-column: 1/2;
 }

@@ -8,7 +8,7 @@ import Temperature from "./Temperature";
 
 gsap.registerPlugin(Draggable);
 
-const Roulette = ({rot, setRot, isValidTemperature}) => {
+const Roulette = ({rot, setRot, isValidTemperature, isOn}) => {
   const knobRef = useRef(null);
   
 
@@ -37,7 +37,8 @@ const Roulette = ({rot, setRot, isValidTemperature}) => {
           strokeWidth="7"
         />
       </svg>
-      <Temperature rotation={Math.round(rot)} />
+      {!isOn?<Temperature rotation={Math.round(rot)} /> : null}
+      
     </div>
   );
 };

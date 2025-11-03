@@ -1,10 +1,13 @@
 .GrainZone {
     padding: 1em 0;
     background-image: url('/img/grains.png');
-    background-size: 22em;
+    background-size: 30em;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center -2.3em;
     width: 100%;
     height: 160%;
-    filter: contrast(2);
+}
+
+.GrainZone:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(255, 255, 255, 0.418))
 }

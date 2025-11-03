@@ -2,11 +2,12 @@
     position: relative;
 }
 
-
-
 #knob {
-    border: solid rgba(224, 219, 219, 0.027) 4px;
     position: absolute;
-    top: 6em;
-    right: 2em;
+    top: -4em;
+    right: 3em;
+}
+
+#knob:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(255, 255, 255, 0.418))
 }

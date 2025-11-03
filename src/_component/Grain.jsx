@@ -1,39 +1,30 @@
-
-'use client'
-import "./Grain.css"
+'use client';
 import { gsap } from "gsap";
-import { useEffect, useRef  } from "react";
+import "./Grain.css";
+import { useEffect, useRef } from "react";
+import ConteurGramme from "./ConteurGramme";
 
-const Grain = ({ aumGramme , isOn}) => {
-//   const grainRef = useRef();
+const Grain = ({ aumGramme, isOn, conter }) => {
+    const grainRef = useRef();
 
-  
-//    useEffect(()=>{
-//     if(!grainRef.current) return;
+    const animationGrain = () => {
+        gsap.fromTo(grainRef.current,
+            { backgroundSize: "30em" },
+            { backgroundSize:"32em", duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 });
+    };
 
-//     gsap.to(grainRef.current,{
-//    scale:isOn ? 1.2:1,
-//     duration: 0.3, 
-//     ease: "power2.out", 
-//     yoyo: true,
-//     repeat: 1
-// }[isOn])
-//    })
-   
-
-   
- 
-
-  return (
-    <div 
-      className="GrainZone"
-      // ref={grainRef}
-      onClick={aumGramme}
-      
-    ></div>
-  );
+    return (
+        <div
+            className="GrainZone"
+            ref={grainRef}
+            onClick={() => {
+                aumGramme(); // call the parent function
+                animationGrain(); // trigger GSAP animation
+            }}
+        >
+         <ConteurGramme className={"conteur"} isOn={isOn} conter={conter}/>
+        </div>
+    );
 };
 
 export default Grain;
-
- 
