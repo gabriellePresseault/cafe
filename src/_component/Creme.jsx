@@ -8,31 +8,31 @@ const Creme = ({ click, onBoutonClick }) => {
   const b2Ref = useRef();
   const b3Ref = useRef();
 
-  
+
   useEffect(() => {
     if (!b1Ref.current) return;
     gsap.to(b1Ref.current, {
-      backgroundColor: click.b1 ? "green" : "#585757",
+      backgroundColor: click.b1 ? "rgb(98 197 255)" : "#585757",
       duration: 0.3,
       ease: "power2.out",
     });
   }, [click.b1]);
 
-  
+
   useEffect(() => {
     if (!b2Ref.current) return;
     gsap.to(b2Ref.current, {
-      backgroundColor: click.b2 ? "green" : "#585757",
+      backgroundColor: click.b2 ? "rgb(98 197 255)" : "#585757",
       duration: 0.3,
       ease: "power2.out",
     });
   }, [click.b2]);
 
-  
+
   useEffect(() => {
     if (!b3Ref.current) return;
     gsap.to(b3Ref.current, {
-      backgroundColor: click.b3 ? "green" : "#585757",
+      backgroundColor: click.b3 ? "rgb(98 197 255)" : "#585757",
       duration: 0.3,
       ease: "power2.out",
     });

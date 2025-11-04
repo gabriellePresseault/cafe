@@ -2,10 +2,25 @@
 
 import "./Cafe.css";
 import { gsap } from "gsap";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, useState } from "react";
 
-const Cafe = ({ isOn, handleClick }) => {
+const Cafe = ({ isOn, handleClick, iscafeBon }) => {
   const cafeRef = useRef();
+  const [clickedOnce, setClickedOnce] = useState(false);
+  const onLocalClick = (e) => {
+    if (!clickedOnce) setClickedOnce(true);
+    if (typeof handleClick === "function") handleClick(e);
+  };
+  let imgBM = "/img/cafevide.png";
+
+  if (clickedOnce) {
+
+    if (isOn && !iscafeBon) imgBM = "/img/cafeMal.png";
+    if (iscafeBon) imgBM = "/img/cafeBon.png";
+  } else {
+
+    imgBM = "/img/cafevide.png";
+  }
 
   useLayoutEffect(() => {
     if (!cafeRef.current) return;
@@ -32,10 +47,11 @@ const Cafe = ({ isOn, handleClick }) => {
 
   return (
     <div
-      className={`CafeZone ${isOn ? 'on' : ''}`} 
+      className={`CafeZone ${isOn ? 'on' : ''}`}
       ref={cafeRef}
-      onClick={handleClick}
-    ></div>
+      onClick={onLocalClick}
+      style={{ backgroundImage: `url(${imgBM})` }}
+    ></div >
   );
 };
 

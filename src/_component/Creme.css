@@ -1,41 +1,69 @@
 .CremeZone {
- width: 171px;
- height: 286px;
+  width: 171px;
+  height: 286px;
   background-image: url('/img/lait.png');
   background-size: cover;
   background-position: center;
   cursor: pointer;
   transition: transform 0.3s ease;
   margin: 0 auto;
+  position: absolute;
+  bottom: 2.5em;
+  left: 11em;
+  scale: 1.2;
 }
 
-.B1{
-     width: 33px;
- height: 33px;
-  background-color: #585757;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin: 0 auto;
-}
-.B2{
-       width: 33px;
- height: 33px;
-  background-color: #585757;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin: 0 auto;
-}
-.B3{
-       width: 33px;
- height: 33px;
-  background-color: #585757;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin: 0 auto;
+.BoutonZone {
+  display: flex;
+  position: relative;
+  left: 10em;
+  top: 4em;
+
+  .B1 {
+    width: 40px;
+    height: 40px;
+    background-color: #585757;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .B2 {
+    width: 40px;
+    height: 40px;
+    background-color: #585757;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .B3 {
+    width: 40px;
+    height: 40px;
+    background-color: #585757;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .B1:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(0, 0, 0, 0.418))
+  }
+
+  .B2:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(0, 0, 0, 0.418))
+  }
+
+  .B3:hover {
+    filter: drop-shadow(0em 1em 0.75rem rgba(0, 0, 0, 0.418))
+  }
 }

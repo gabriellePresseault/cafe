@@ -1,12 +1,12 @@
 .TemperatureZone {
     position: relative;
-    top: -0.1em;
+    top: -1.8em;
     right: 15em;
     font-size: 2em;
     text-align: right;
 
 
-    h1{
+    h1 {
         color: rgb(98 197 255);
         font-weight: bold;
 
